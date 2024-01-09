@@ -4,6 +4,7 @@ import { useAuth } from '@/lib/auth';
 
 import { protectedRoutes } from './protected';
 import { publicRoutes } from './public';
+import Layout from '@/components/Layout';
 
 export const AppRoutes = () => {
   const auth = useAuth();
@@ -14,5 +15,9 @@ export const AppRoutes = () => {
 
   const element = useRoutes([...routes, ...commonRoutes]);
 
-  return <>{element}</>;
+  return (
+    <Layout>
+      {element}
+    </Layout>
+  );
 };

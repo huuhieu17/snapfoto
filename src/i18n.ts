@@ -3,7 +3,6 @@ import vietnamese from "@/assets/locales/vi/app.json";
 import i18n from "i18next"
 import LanguageDetector from "i18next-browser-languagedetector"
 import {initReactI18next} from "react-i18next"
-import backend from "i18next-http-backend"
 const resources = {
     en: {
         translation: english,
@@ -12,7 +11,7 @@ const resources = {
         translation: vietnamese,
     }
 }
-i18n.use(LanguageDetector).use(backend).use(initReactI18next).init({
+i18n.use(LanguageDetector).use(initReactI18next).init({
     resources,
     fallbackLng: "vi",
     interpolation: {
