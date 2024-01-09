@@ -4,7 +4,7 @@ import { Container, Grid, IconButton, TextField, Typography } from "@mui/materia
 import { memo } from "react"
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux"
-import { Link, useLocation, useParams } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 const Header = () => {
     const { t } = useTranslation()
     const dispatch = useDispatch();
@@ -13,13 +13,13 @@ const Header = () => {
         <div className={`${['/'].includes(pathname) ? 'shadow' : ''}`}>
             <Container>
                 <Grid container>
-                    <Grid item xs={3}>
+                    <Grid item xs={11} lg={3}>
                         <Link to={'/'}><Typography variant="h4">SnapFoto</Typography></Link>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={0} lg={6}>
                         <TextField size="small" placeholder="Tìm kiếm" />
                     </Grid>
-                    <Grid item xs={3}>
+                    <Grid item xs={1} lg={3}>
                         <IconButton title={t(`Khám phá`)} onClick={() => {
                             dispatch(changeTheme())
                         }}>

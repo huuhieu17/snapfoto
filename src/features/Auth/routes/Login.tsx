@@ -1,8 +1,8 @@
-import { Box, Avatar, Typography, TextField, FormControlLabel, Checkbox, Button, Grid, CssBaseline, Paper } from "@mui/material"
-import { Link } from "react-router-dom"
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { useTranslation } from "react-i18next";
 import Copyright from "@/components/Copyright/Copyright";
+import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { Avatar, Box, Button, Checkbox, FormControlLabel, Grid, TextField, Typography } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 const Login = () => {
     const { t } = useTranslation();
     return (
