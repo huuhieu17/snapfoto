@@ -36,7 +36,7 @@ const Login = () => {
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
-                           {t`Đăng nhập vào SnapFoto`}
+                           {t(`Đăng nhập vào SnapFoto`)}
                         </Typography>
                         <Box component="form" noValidate onSubmit={() => { }} sx={{ mt: 1 }}>
                             <TextField
@@ -44,7 +44,7 @@ const Login = () => {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Email Address"
+                                label={t(`Địa chỉ email`)}
                                 name="email"
                                 autoComplete="email"
                                 autoFocus
@@ -54,7 +54,7 @@ const Login = () => {
                                 required
                                 fullWidth
                                 name="password"
-                                label="Password"
+                                label={t(`Mật khẩu`)}
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"

@@ -1,5 +1,5 @@
-import english from "@/assets/languages/en.json";
-import vietnamese from "@/assets/languages/vi.json";
+import english from "@/assets/locales/en/app.json";
+import vietnamese from "@/assets/locales/vi/app.json";
 import i18n from "i18next"
 import LanguageDetector from "i18next-browser-languagedetector"
 import {initReactI18next} from "react-i18next"
