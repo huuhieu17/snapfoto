@@ -8,6 +8,7 @@ import { Spinner } from './components/Spinner'
 import { AuthProvider } from './lib/auth'
 import { queryClient } from './lib/react-query'
 import { AppRoutes } from './routes'
+import { AppThemeProvider } from './providers/ThemeProvider'
 function App() {
   return (
     <React.Suspense
@@ -18,13 +19,14 @@ function App() {
       }
     >
       <QueryClientProvider client={queryClient}>
-        <ToastContainer />
-        <AuthProvider>
-          <Router>
-            <AppRoutes />
-          </Router>
-        </AuthProvider>
-
+        <AppThemeProvider>
+          <ToastContainer />
+          <AuthProvider>
+            <Router>
+              <AppRoutes />
+            </Router>
+          </AuthProvider>
+        </AppThemeProvider>
       </QueryClientProvider>
     </React.Suspense>
   )

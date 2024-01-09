@@ -61,7 +61,7 @@ const Login = () => {
                             />
                             <FormControlLabel
                                 control={<Checkbox value="remember" color="primary" />}
-                                label="Remember me"
+                                label={t("Ghi nhớ đăng nhập")}
                             />
                             <Button
                                 type="submit"
@@ -69,17 +69,17 @@ const Login = () => {
                                 variant="contained"
                                 sx={{ mt: 3, mb: 2 }}
                             >
-                                Sign In
+                                {t(`Đăng nhập`)}
                             </Button>
                             <Grid container>
                                 <Grid item xs>
                                     <Link to={"#"}>
-                                        Forgot password?
+                                        {t("Quên mật khẩu ?")}
                                     </Link>
                                 </Grid>
                                 <Grid item>
                                     <Link to={"#"}>
-                                        {"Don't have an account? Sign Up"}
+                                        {t("Bạn chưa có tài khoản ? Đăng ký ngay")}
                                     </Link>
                                 </Grid>
                             </Grid>
