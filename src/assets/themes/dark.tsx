@@ -8,7 +8,7 @@ const darkTheme = createTheme({
             paper: '#000000'
         },
         primary: {
-            main: "#F0EB8D"
+            main: "#F6B17A"
         },
         secondary: {
             main: "#F6B17A"
