@@ -1,19 +1,16 @@
-import { changeTheme } from "@/stores/themeSlice";
+import { useAuth } from "@/lib/auth";
 import { Email, Explore, Home, Notifications, Person } from "@mui/icons-material";
 import { Container, Divider, useTheme } from "@mui/material";
 import { memo } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
-import Header from "./Header";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useAuth } from "@/lib/auth";
-
+import Header from "./Header";
+import styles from "./Layout.module.scss"
 interface LayoutProps {
     children: any
 }
 const Layout: React.FC<LayoutProps> = ({ children }) => {
     const {t} = useTranslation();
-    const dispatch = useDispatch();
     const theme = useTheme();
     const location = useLocation();
     const navigate = useNavigate();
@@ -22,8 +19,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="w-screen h-screen" aria-label="Layout">
         <div className="w-full h-full flex flex-col">
           <Header />
-          <div className="flex-[1] w-full overflow-hidden" aria-label="Content">
-            <Container>{children}</Container>
+          <div className={`flex-[1] w-full overflow-y-auto ${styles.layout}`} aria-label="Content">
+            <Container className="h-full">{children}</Container>
           </div>
           {auth.user && (
             <div className="lg:hidden block">
